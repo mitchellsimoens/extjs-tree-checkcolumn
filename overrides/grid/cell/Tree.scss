@@ -1,0 +1,45 @@
+$treecell-checked-color: dynamic($base-color);
+$treecell-trimode-color: dynamic($base-color);
+$treecell-unchecked-color: dynamic($highlight-color);
+
+.x-treecell {
+  &.x-treecell-checkable {
+    .x-check-el {
+      color: $treecell-unchecked-color;
+      font-family: 'Material Icons';
+      font-size: 18px;
+      height: 18px;
+      margin: 0 5px;
+      width: 18px;
+    }
+
+    &.x-treecell-checked {
+      .x-check-el {
+        &:before {
+          color: $treecell-trimode-color;
+          content: 'check_box';
+        }
+      }
+    }
+
+    &.x-treecell-trimode {
+      .x-check-el {
+        font-family: FontAwesome;
+        font-size: 16px;
+
+        &:before {
+          color: $treecell-checked-color;
+          content: '\f0c8';
+        }
+      }
+    }
+
+    &.x-treecell-unchecked {
+      .x-check-el {
+        &:before {
+          content: 'check_box_outline_blank';
+        }
+      }
+    }
+  }
+}
