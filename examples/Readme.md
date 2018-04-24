@@ -1,38 +1,9 @@
 # CheckTree/examples
 
-This folder contains example applications demonstrating this package. Each of
-these applications will be built as part of the package build:
+## Install
 
-    cd /path/to/package
-    sencha package build
+You need to copy Ext JS 6.5.3 into extamples/myapp/ext or you can use the [`sencha app install`](http://docs.sencha.com/cmd/guides/advanced_cmd/cmd_reference.html#advanced_cmd-_-cmd_reference_-_sencha_app_install) command.
 
-As applications, they can also be built individually:
+## Build
 
-    cd /path/to/package/examples/example-app
-    sencha app build
-
-Or you can build all examples as a group:
-
-    cd /path/to/package
-    sencha ant examples
-
-The ideal location for the example builds to reside is the `"./build"` folder:
-
-    /path/to/package/
-        src/
-        resources/
-        ...
-        examples/
-            example-app/
-            other-example/
-        ...
-        build/
-            resources/
-            examples/
-                example-app/
-                other-example/
-
-This can be specified in the `".sencha/app/build.properties"` file for the
-example applications:
-
-    build.dir=${package.build.dir}/examples/${app.name}
+To build you can run [`sencha app build`](http://docs.sencha.com/cmd/guides/advanced_cmd/cmd_reference.html#advanced_cmd-_-cmd_reference_-_sencha_app_build) from the example's directory or `sencha ant examples` from the package root directory to build all examples.
